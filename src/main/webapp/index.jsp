@@ -1,3 +1,5 @@
+<%@page import="com.db.DBConnect" %>
+<%@page import="java.sql.Connection" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -54,14 +56,14 @@
   }
 }
 
-/* Card shadow style */
+
 .paint-card {
   box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect for cards */
+
 .paint-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 15px rgba(0,0,0,0.4);
