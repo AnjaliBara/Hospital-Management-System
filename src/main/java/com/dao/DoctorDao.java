@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.entity.Doctor;
+
 public class DoctorDao {
 
 	private Connection conn;
@@ -25,7 +27,7 @@ public class DoctorDao {
             ps.setString(3, d.getQualification());
             ps.setString(4, d.getSpecialist());
             ps.setString(5, d.getEmail());
-            ps.setString(6, d.getMoNo());
+            ps.setString(6, d.getMobNo());
             ps.setString(7, d.getPassword());
             
             int i = ps.executeUpdate();
@@ -49,11 +51,11 @@ public class DoctorDao {
                 d = new Doctor();
                 d.setId(rs.getInt(1));
                 d.setFullName(rs.getString(2));
-                d.setDOB(rs.getString(3));
+                d.setDob(rs.getString(3));
                 d.setQualification(rs.getString(4));
                 d.setSpecialist(rs.getString(5));
                 d.setEmail(rs.getString(6));
-                d.setMoNo(rs.getString(7));
+                d.setMobNo(rs.getString(7));
                 d.setPassword(rs.getString(8));
                 list.add(d);
             }
