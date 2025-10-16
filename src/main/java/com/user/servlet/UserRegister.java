@@ -1,8 +1,6 @@
 package com.user.servlet;
 
-<<<<<<< HEAD
-public class UserRegister {
-=======
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -39,7 +37,4 @@ public class UserRegister extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-	
->>>>>>> cfb7e32 (Added Admin login and logout)
-
 }
