@@ -93,12 +93,6 @@ public class Doctor {
 		this.password = password;
 	}
 
-	@Override
-	public String toString() {
-		return "Doctor [id=" + id + ", fullName=" + fullName + ", dob=" + dob + ", qualification=" + qualification
-				+ ", specialist=" + specialist + ", email=" + email + ", mobNo=" + mobNo + ", password=" + password
-				+ "]";
-	}
 	
     
     

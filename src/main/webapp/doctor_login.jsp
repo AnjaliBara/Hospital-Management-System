@@ -7,10 +7,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Doctor Login Page</title>
-<%@ include file="component/allcss.jsp"%>
+<%@ include file="../component/allcss.jsp"%>
 </head>
 <body>
-<%@include file="component/navbar.jsp" %>
+<%@include file="../component/navbar.jsp" %>
 
 <div class="container p-5">
     <div class="row">
@@ -19,13 +19,13 @@
                 <div class="card-body">
                     <p class="fs-4 text-center">Doctor Login</p> 
                     <c:if test="${not empty succMsg}">
-    				<p class="text-center text-success fs-3">${succMsg}</p>
-    				<c:remove var="succMsg" scope="session" />
+    					<p class="text-center text-success fs-3">${succMsg}</p>
+    					<c:remove var="succMsg" scope="session" />
 					</c:if>
 
 					<c:if test="${not empty errorMsg}">
-    				<p class="text-center text-danger fs-5">${errorMsg}</p>
-    				<c:remove var="errorMsg" scope="session" />
+    					<p class="text-center text-danger fs-5">${errorMsg}</p>
+    					<c:remove var="errorMsg" scope="session" />
 					</c:if>            
 
                     <form action="doctorLogin" method="post">

@@ -10,11 +10,11 @@
 <%@include file="../component/allcss.jsp"%>
 </head>
 <body>
-	<c:if test="${empty doctobj }">
-		<c:redirect url=" .. /doctor_login. jsp"></c:redirect>
+	<c:if test="${empty doctObj}">
+  		<c:redirect url="../doctor_login.jsp"></c:redirect>
 	</c:if>
 
-	<%@include file="navbar.jsp" %>>
+	<%@include file="navbar.jsp" %>
 	<h1>Doctor Dashboard</h1>
 </body>
 </html>
