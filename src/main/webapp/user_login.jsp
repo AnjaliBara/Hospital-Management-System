@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@page isELIgnored="false" %>
 
 <!DOCTYPE html>
 <html>
@@ -33,9 +34,13 @@
     				<p class="text-center text-danger fs-5">${errorMsg}</p>
    					 <c:remove var="errorMsg" scope="session" />
 					</c:if>
+                    <script>
+                        setTimeout(() => {const msg = document.querySelector('.text-success, .text-danger');
+                        if (msg) msg.style.display = 'none';}, 3000); 
+                    </script>
                     
            
-                    <form action="#" method="post">
+                    <form action="userLogin" method="post">
                         <div class="mb-3">
                             <label class="form-label">Email address</label>
                             <input required name="email" type="email" class="form-control">
