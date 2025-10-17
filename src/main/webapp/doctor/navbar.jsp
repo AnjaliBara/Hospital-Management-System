@@ -4,7 +4,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.jsp">
-            <i class="fas fa-clinic-medical"></i> Medi Home
+            <i class="fas fa-clinic-medical"></i> HOSPITEX
         </a>
         <button 
             class="navbar-toggler" 

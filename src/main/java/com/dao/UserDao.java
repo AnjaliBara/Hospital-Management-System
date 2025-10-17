@@ -42,7 +42,7 @@ public class UserDao {
    public User login(String em,String psw) {
 	   User u =null;
 	   try {
-		   String sql="select * from user_dtls where email=? and password";
+		   String sql="select * from user_dtls where email=? and password=?";
 		   PreparedStatement ps = conn.prepareStatement(sql);
 		   ps.setString(1, em);
 		   ps.setString(2, psw);
@@ -52,7 +52,9 @@ public class UserDao {
 		   {
 			   u = new User();
 			   u.setId(rs.getInt(1));
-			   u.setFullName(sql);
+			   u.setFullName(rs.getString(2));
+			   u.setEmail(rs.getString(3));
+			   u.setPassword(rs.getString(4));
 		   }
 		   
 	   } catch(Exception e) {
