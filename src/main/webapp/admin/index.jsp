@@ -40,6 +40,7 @@
                 </div> 
             </div>
         </div>
+        
         <div class="col-md-4">
             <div class="card paint-card">
                 <div class="card-body text-center text-success">
