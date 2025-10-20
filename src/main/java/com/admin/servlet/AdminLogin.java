@@ -27,7 +27,7 @@ public class AdminLogin extends HttpServlet {
 				resp.sendRedirect("admin/index.jsp");
 			}else {
 				session.setAttribute("errorMsg", "Invalid Email and Password");
-				resp.sendRedirect("admin_login.jsp");
+				resp.sendRedirect("admin/index.jsp");
 				
 			}
 			

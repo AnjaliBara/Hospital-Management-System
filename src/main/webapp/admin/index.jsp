@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +16,8 @@
 </head>
 <body>
      <%@include file="navbar.jsp" %>
-     <c:if test="${empty adminObj }">
-     <c:redirect url="../admin_login.jsp"></c:redirect>
+     <c:if test="${ empty adminObj }">
+         <c:redirect url="../admin_login.jsp"></c:redirect>
      </c:if>
      <div class="container p-5">
              <p class="text-center fs-3">Admin Dashboard</p>
@@ -63,7 +64,7 @@
         <div class="col-md-4 mt-2">
             <div class="card paint-card" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <div class="card-body text-center text-success">
-                    <i class="fas fa-calendar-check fa-3x"></i><br>
+                    <i class="far fa-calendar-check fa-3x"></i><br>
                     <p class="fs-4 text-center">
                         Specialist <br>34
                     </p>
@@ -72,5 +73,39 @@
         </div>  
     </div>
 </div>
+<!-- Modal for Adding Specialist -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Specialist</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body">
+                
+                    <form action="../addSpecialist" method="post">
+                        <div class="form-group">
+                            <label>Enter Specialist Name</label>
+                            <input type="text" name="specName" class="form-control" required>
+                        </div>
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn btn-primary">Add</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
 </body>
 </html>
