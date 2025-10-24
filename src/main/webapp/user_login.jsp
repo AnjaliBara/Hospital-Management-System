@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@page isELIgnored="false" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,9 +24,23 @@
             <div class="card paint-card">
                 <div class="card-body">
                     <p class="fs-4 text-center">User Login</p> 
-            
+                    
+                    <c:if test="${not empty succMsg}">
+    				<p class="text-center text-success fs-3">${succMsg}</p>
+   					 <c:remove var="succMsg" scope="session" />
+					</c:if>
 
-                    <form action="#" method="post">
+					<c:if test="${not empty errorMsg}">
+    				<p class="text-center text-danger fs-5">${errorMsg}</p>
+   					 <c:remove var="errorMsg" scope="session" />
+					</c:if>
+                    <script>
+                        setTimeout(() => {const msg = document.querySelector('.text-success, .text-danger');
+                        if (msg) msg.style.display = 'none';}, 3000); 
+                    </script>
+                    
+           
+                    <form action="userLogin" method="post">
                         <div class="mb-3">
                             <label class="form-label">Email address</label>
                             <input required name="email" type="email" class="form-control">
