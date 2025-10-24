@@ -11,6 +11,7 @@ public class Doctor {
     private String mobNo;
     private String password;
     
+
 	public int getId() {
 		return id;
 	}
@@ -74,12 +75,18 @@ public class Doctor {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-	public Doctor() {
+	public Doctor(String fullName, String dob, String qualification, String specialist, String email, String mobNo,
+			String password) {
 		super();
-		// TODO Auto-generated constructor stub
+		this.fullName = fullName;
+		this.dob = dob;
+		this.qualification = qualification;
+		this.specialist = specialist;
+		this.email = email;
+		this.mobNo = mobNo;
+		this.password = password;
 	}
-
+	
 	public Doctor(int id, String fullName, String dob, String qualification, String specialist, String email,
 			String mobNo, String password) {
 		super();
@@ -93,13 +100,8 @@ public class Doctor {
 		this.password = password;
 	}
 
-	@Override
-	public String toString() {
-		return "Doctor [id=" + id + ", fullName=" + fullName + ", dob=" + dob + ", qualification=" + qualification
-				+ ", specialist=" + specialist + ", email=" + email + ", mobNo=" + mobNo + ", password=" + password
-				+ "]";
-	}
-	
-    
-    
+	public Doctor() {
+		super();
+		// TODO Auto-generated constructor stub
+	}   
 }
