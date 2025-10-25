@@ -14,7 +14,6 @@ public class DBConnect {
 
 		  conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem","root","Asm#711397");
 
-	
 	  }catch (Exception e) {
 		  e.printStackTrace();
 	  }
