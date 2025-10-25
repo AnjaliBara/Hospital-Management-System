@@ -14,6 +14,7 @@ import com.dao.UserDao;
 import com.db.DBConnect;
 import com.entity.User;
 
+@SuppressWarnings("serial")
 @WebServlet("/user_register")
 public class UserRegister extends HttpServlet {
 

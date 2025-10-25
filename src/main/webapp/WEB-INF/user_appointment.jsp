@@ -1,4 +1,4 @@
-<%@page import="com.db.Dbconnect"%>
+<%@page import="com.db.DBConnect"%>
 <%@page import="com.dao.DoctorDao"%>
 <%
 response.setHeader("Cache-Control", "no-cache");
@@ -18,7 +18,7 @@ response.setDateHeader("Expires", 0);
 <head>
 <meta charset="ISO-8859-1">
 <title>User Appointment</title>
-<%@include file="components/allcss.jsp"%>
+<%@include file="/component/allcss.jsp"%>
 <style type="text/css">
 .paint-card {
 	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
@@ -35,7 +35,7 @@ response.setDateHeader("Expires", 0);
 </style>
 </head>
 <body>
-	<%@include file="components/navbar.jsp" %>
+	<%@include file="/component/navbar.jsp" %>
 
 	<div class="container-fulid backImg p-5">
 		<p class="text-center fs-2 text-white"></p>
@@ -109,7 +109,7 @@ response.setDateHeader("Expires", 0);
 									<option value="">--select--</option>
 
 									<%
-									DoctorDao dao = new DoctorDao(Dbconnect.getConn());
+									DoctorDao dao = new DoctorDao(DBConnect.getConn());
 									List<Doctor> list = dao.getAllDoctor();
 									for (Doctor d : list) {
 									%>
@@ -143,7 +143,7 @@ response.setDateHeader("Expires", 0);
 		</div>
 
 	</div>
-	<%@include file="components/footer.jsp"%>
+	<%@include file="/component/footer.jsp"%>
 
 </body>
 </html>

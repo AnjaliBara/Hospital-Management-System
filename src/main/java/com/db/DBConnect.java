@@ -12,7 +12,7 @@ public class DBConnect {
   
 		  Class.forName("com.mysql.cj.jdbc.Driver");
 
-		  conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem","root","Aradhana7@");
+		  conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitalmanagementsystem","root","Asm#711397");
 
 	
 	  }catch (Exception e) {
