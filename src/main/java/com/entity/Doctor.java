@@ -75,10 +75,11 @@ public class Doctor {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Doctor(String fullName, String dob, String qualification, String specialist, String email, String mobNo,
+	public Doctor(String fullName , String dob, String qualification, String specialist, String email, String mobNo,
 			String password) {
 		super();
-		this.fullName = fullName;
+		
+		this.fullName = fullName;;
 		this.dob = dob;
 		this.qualification = qualification;
 		this.specialist = specialist;
@@ -88,7 +89,7 @@ public class Doctor {
 	}
 	
 	public Doctor(int id, String fullName, String dob, String qualification, String specialist, String email,
-			String mobNo, String password) {
+			String mobNo) {
 		super();
 		this.id = id;
 		this.fullName = fullName;
@@ -97,7 +98,7 @@ public class Doctor {
 		this.specialist = specialist;
 		this.email = email;
 		this.mobNo = mobNo;
-		this.password = password;
+		
 	}
 
 	public Doctor() {
