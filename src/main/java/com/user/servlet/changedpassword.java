@@ -1,4 +1,4 @@
-package com.user;
+package com.user.servlet;
 
 import java.io.IOException;
 
@@ -54,15 +54,6 @@ public class changedpassword extends HttpServlet {
 			 
 			resp.sendRedirect("Changed_Password.jsp");
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 	}
 }

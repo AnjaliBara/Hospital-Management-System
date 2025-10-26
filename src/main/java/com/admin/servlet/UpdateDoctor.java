@@ -29,7 +29,7 @@ public class UpdateDoctor extends HttpServlet{
 			String password = req.getParameter("password");
 			int id=Integer.parseInt(req.getParameter("id"));
 			
-			Doctor d =new Doctor(id,fullName, dob, qualification, spec, email, mobno, password);
+			Doctor d =new Doctor(id,fullName, dob, qualification, spec, email, mobno);
 			
 			DoctorDao dao = new DoctorDao(DBConnect.getConn());
 			

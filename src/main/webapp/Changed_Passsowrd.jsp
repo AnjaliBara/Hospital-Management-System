@@ -7,7 +7,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Hospitex<title>
-<%@include file="components/allcss.jsp"%>
+<%@include file="component/allcss.jsp"%>
 
 <style type="text/css">
 .paint-card {
@@ -16,7 +16,7 @@
 </style>
 </head>
 <body>
-	<%@include file="components/navbar.jsp" %>
+	<%@include file="component/navbar.jsp" %>
 
 	<c:if test="${ empty userObj }">
 		<c:redirect url="user_login.jsp"></c:redirect>

@@ -11,7 +11,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Patient Appointment Details</title>
-<%@include file="../components/allcss.jsp"%>
+<%@include file="../component/allcss.jsp"%>
 <style type="text/css">
 .paint-card {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -111,7 +111,7 @@
                                         <% } %>
                                     </td>
                                     <td><%=ap.getEmail()%></td>
-                                    <td><%=ap.getPhno()%></td>
+                                    <td><%=ap.getPhNo()%></td>
                                     <td><%=ap.getDiseases()%></td>
                                     <td><%=ap.getAddress()%></td>
                                     <td>
